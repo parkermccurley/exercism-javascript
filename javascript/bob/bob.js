@@ -35,7 +35,6 @@ Bob.prototype.hey = function(input) {
   }
 
   function multipleSentences(string) {
-    console.log(string.replace(/[^!?.]/g, ''));
     if (string.replace(/[^!?.]/g, '').length > 1)
       return true;
     return false;
