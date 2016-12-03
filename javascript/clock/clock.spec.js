@@ -150,7 +150,7 @@ describe('Clock', function () {
 
     describe('Construct two separate clocks, set times, test if they are equal', function () {
 
-      it('clocks with same time', function () {
+      xit('clocks with same time', function () {
         expect(at(15, 37).equals(at(15, 37))).toBeTruthy();
       });
 
