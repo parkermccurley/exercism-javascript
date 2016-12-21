@@ -2,10 +2,10 @@ defmodule NucleotideCount do
   @nucleotides [?A, ?C, ?G, ?T]
 
   def count(strand, nucleotide) do
-    strand |> Enum.count(fn char -> char == nucleotide end)
+    strand |> Enum.count(&(&1 == nucleotide))
   end
 
   def histogram(strand) do
-    @nucleotides |> Map.new(fn char -> { char, count(strand, char) } end)
+    @nucleotides |> Map.new(&({ &1, count(strand, &1)}))
   end
 end
